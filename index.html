@@ -130,40 +130,6 @@
       }
     }
   </style>
-</head>
-<body>
-  <script>
-    // Anzahl der Schneeflocken
-    const snowflakeCount = 100;
-
-    // Funktion, um eine Schneeflocke zu erzeugen
-    function createSnowflake() {
-      const snowflake = document.createElement("div");
-      snowflake.classList.add("snowflake");
-      snowflake.innerHTML = "&#10052;"; // Schneeflocken-Symbol
-
-      // Zufällige Position und Eigenschaften der Schneeflocke
-      snowflake.style.left = Math.random() * 100 + "vw"; // Horizontale Position
-      snowflake.style.fontSize = Math.random() * 10 + 10 + "px"; // Größe
-      snowflake.style.animationDuration = Math.random() * 3 + 5 + "s"; // Geschwindigkeit
-
-      // Schneeflocke dem Body hinzufügen
-      document.body.appendChild(snowflake);
-
-      // Entferne die Schneeflocke nach der Animation
-      snowflake.addEventListener("animationend", () => {
-        snowflake.remove();
-      });
-    }
-
-    // Funktion, die kontinuierlich Schneeflocken erzeugt
-    function generateSnowflakes() {
-      setInterval(createSnowflake, 200); // Alle 200ms eine neue Schneeflocke
-    }
-
-    // Start der Schneeflocken-Generierung
-    generateSnowflakes();
-  </script>
 </body>
 </html>
     
