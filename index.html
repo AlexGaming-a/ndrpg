@@ -75,4 +75,64 @@
         }, 1000);
     </script>
 </body>
+</html><!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schnee Animation</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-color: #1e3c72; /* Dunkelblauer Hintergrund */
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .snowflake {
+      position: absolute;
+      top: -10px;
+      color: white;
+      font-size: 1em;
+      opacity: 0.8;
+      user-select: none;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Willkommen im Schneeparadies!</h1>
+
+  <script>
+    // Anzahl der Schneeflocken
+    const snowflakeCount = 100;
+
+    // Erzeuge und animiere Schneeflocken
+    for (let i = 0; i < snowflakeCount; i++) {
+      const snowflake = document.createElement("div");
+      snowflake.classList.add("snowflake");
+      snowflake.innerHTML = "&#10052;"; // Schneeflocken-Symbol
+
+      // Zufällige Position und Größe der Schneeflocke
+      snowflake.style.left = Math.random() * 100 + "vw";
+      snowflake.style.fontSize = Math.random() * 10 + 10 + "px";
+      snowflake.style.animationDuration = Math.random() * 3 + 5 + "s"; // Geschwindigkeit
+      snowflake.style.opacity = Math.random();
+
+      // Füge die Schneeflocke zur Seite hinzu
+      document.body.appendChild(snowflake);
+    }
+  </script>
+</body>
 </html>
