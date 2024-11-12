@@ -106,27 +106,30 @@
   </style>
 </head>
 <body>
-  <h1 style="text-align:center; margin-top:20vh;">Willkommen zur Winterlandschaft</h1>
 
+  <!-- JavaScript für den Schneefall -->
   <script>
-    // Anzahl der Schneeflocken
-    const snowflakeCount = 100;
+    const snowflakeCount = 100;  // Anzahl der Schneeflocken
 
-    // Erzeuge und animiere Schneeflocken
-    for (let i = 0; i < snowflakeCount; i++) {
-      const snowflake = document.createElement("div");
-      snowflake.classList.add("snowflake");
-      snowflake.innerHTML = "&#10052;"; // Schneeflocken-Symbol
+    // Funktion zum Erstellen einer Schneeflocke
+    function createSnowflake() {
+      const snowflake = document.createElement('div');
+      snowflake.classList.add('snowflake');
+      snowflake.textContent = ' ❄️';
+      snowflake.style.left = Math.random() * 100 + 'vw';  // Zufällige horizontale Position
+      snowflake.style.animationDuration = (Math.random() * 5 + 5) + 's';  // Zufällige Fallgeschwindigkeit
+      snowflake.style.fontSize = Math.random() * 15 + 10 + 'px';  // Zufällige Größe
 
-      // Zufällige Position und Eigenschaften der Schneeflocke
-      snowflake.style.left = Math.random() * 100 + "vw";
-      snowflake.style.fontSize = Math.random() * 10 + 10 + "px";
-      snowflake.style.animationDuration = Math.random() * 3 + 5 + "s"; // Geschwindigkeit
-      snowflake.style.opacity = Math.random();
-
-      // Füge die Schneeflocke zum Body hinzu
       document.body.appendChild(snowflake);
+
+      // Entferne die Schneeflocke nach Ende der Animation
+      snowflake.addEventListener('animationend', () => {
+        snowflake.remove();
+      });
     }
+
+    // Schleife zum Erstellen der Schneeflocken
+    setInterval(createSnowflake, 200);  // alle 200ms eine neue Schneeflocke
   </script>
-</body>
-</html>
+    
+    
