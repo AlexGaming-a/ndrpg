@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Niedersachsen Roleplay</title>
+  <style>
+    /* Grundlegende Stile und Dark Mode */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1e1e1e;
+      color: #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 0 10px;
+    }
+
+    header {
+      background-color: #000000;
+      padding: 1.5rem;
+      width: 100%;
+      max-width: 800px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: #00ff62;
+    }
+
+    nav a {
+      color: #e0e0e0;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 5px 10px;
+      transition: color 0.3s, background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #ffcc00;
+      color: #1e1e1e;
+      border-radius: 5px;
+    }
+
+    section {
+      background-color: #2a2a2a;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      padding: 2rem;
+      width: 100%;
+      max-width: 800px;
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: #b5dd00;
+      margin-bottom: 1rem;
+    }
+
+    p, li {
+      font-size: 1rem;
+      color: #b0b0b0;
+    }
+
+    #rules ul {
+      list-style-type: none;
+      padding: 0;
+      color: #b0b0b0;
+    }
+
+    #rules li {
+      margin: 0.5rem 0;
+    }
+
+    .discord-button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: #7289da;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 1rem;
+      transition: background-color 0.3s;
+    }
+
+    .discord-button:hover {
+      background-color: #003cff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.875rem;
+      color: #666;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header mit Logo und Navigation -->
+  <header>
+    <h1>Niedersachsen Roleplay ER:LC</h1>
+    <nav>
+      <a href="#about">Über Uns</a>
+      <a href="#rules">Regeln</a>
+      <a href="#apply">Bewerben</a>
+      <a href="#community">Community</a>
+    </nav>
+  </header>
+
+  <!-- Über Uns Sektion -->
+  <section id="about">
+    <h2>Über Uns</h2>
+    <p>Willkommen auf unserem ER:LC Roleplay Server! Wir bieten eine realistische und spannende Spielerfahrung in Roblox Emergency Response: Liberty County.
+      Professionelle Server-Administration: Ein engagiertes Team sorgt für einen reibungslosen Spielbetrieb und eine sichere Umgebung.Aktive Community: Unsere Community ist aktiv, freundlich und hilfsbereit. Wir fördern ein respektvolles Miteinander und helfen neuen Spielern, sich schnell zurechtzufinden.
+ 
+    </p>
+  </section>
+
+  <!-- Regeln Sektion -->
+  <section id="rules">
+    <h2>Regeln</h2>
+    <ul>
+      <li>Mache kein RDM.</li>
+      <li>Mache kein VDM.</li>
+      <li>Mache kein FRP.</li>
+      <li>Machen kein Meta Gaming.</li>
+      <a href="https://docs.google.com/document/d/1iSmeN6ojq-YDRa64N3fz9zq13RwsJMVJcJXcahk0FEU/edit?usp=sharing" target="_blank">Unsere Regeln</a> </p>
+
+    </ul>
+  </section>
+
+  <!-- Bewerbung Sektion -->
+  <section id="apply">
+    <h2>Bewerben</h2>
+    <p>Interessiert sich zu Bewerben? <a href="https://teams.galaxybot.app/team/1297485114581975051/public/application" target="_blank">Bewerbungs Formular</a> Dann machn Sie dies.</p>
+  </section>
+
+  <!-- Community Sektion -->
+  <section id="community">
+    <h2>Community</h2>
+    <p>Schließe dich unserer Discord-Community an, um mit anderen Roleplayern zu chatten, Events zu planen und mehr!</p>
+    <a href="https://discord.gg/e3p8efcc7X" target="_blank" class="discord-button">Join Discord</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 ER:LC Roleplay Server. Alle Rechte vorbehalten.</p>
+  </footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schnee-Effekt mit Scrollen</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #282c34;
+            color: white;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+            min-height: 200vh; /* Damit der Benutzer nach unten scrollen kann */
+        }
+
+        /* Schneeflocken-Design */
+        .snowflake {
+            position: absolute;
+            color: white;
+            font-size: 20px;
+            user-select: none;
+            pointer-events: none;
+            z-index: 9999;
+            animation: fall linear infinite;
+        }
+
+        /* Der Fall-Effekt */
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px); /* Beginnt oberhalb des Bildschirms */
+            }
+            100% {
+                transform: translateY(100vh); /* Fällt bis zum unteren Rand des Viewports */
+            }
+        }
+
+        /* Schneeflocken-Geschwindigkeiten und -Positionen */
+        .snowflake:nth-child(odd) {
+            animation-duration: 8s;
+            animation-delay: 0s;
+        }
+
+        .snowflake:nth-child(even) {
+            animation-duration: 12s;
+            animation-delay: 2s;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Funktion, um Schneeflocken zu erzeugen
+        function createSnowflakes() {
+            const snowflakeCount = 150; // Anzahl der Schneeflocken
+            const body = document.body;
+
+            for (let i = 0; i < snowflakeCount; i++) {
+                let snowflake = document.createElement("div");
+                snowflake.classList.add("snowflake");
+                snowflake.textContent = "❄"; // Unicode für Schneeflocke
+
+                // Zufällige Position und Eigenschaften der Schneeflocken
+                snowflake.style.left = Math.random() * 100 + "vw";  // Zufällige X-Position (über den gesamten Bildschirm verteilt)
+                snowflake.style.fontSize = (Math.random() * 10 + 15) + "px"; // Zufällige Schneeflockengröße
+                snowflake.style.animationDuration = (Math.random() * 10 + 8) + "s";  // Zufällige Dauer (8-18 Sekunden)
+                snowflake.style.animationDelay = Math.random() * 10 + "s"; // Zufällige Verzögerung (0-10 Sekunden)
+
+                // Schneeflocken dem Body hinzufügen
+                body.appendChild(snowflake);
+            }
+        }
+
+        // Aufruf der Funktion, um Schneeflocken zu erzeugen
+        createSnowflakes();
+    </script>
+</body>
+</html>
